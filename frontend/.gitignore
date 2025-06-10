@@ -1,0 +1,40 @@
+# Node modules
+**/node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output
+**/build/
+**/dist/
+
+# Env files
+.env
+
+# Editor folders
+.vscode/
+.idea/
+
+# Testing
+coverage/
+
+# React-specific
+frontend/.env
+frontend/.next/
+frontend/.cache/
+frontend/public/static/
+
+# Python backend
+__pycache__/
+*.pyc
+instance/
+*.sqlite3
+*.db
+
+# Temporary files
+*.swp
+*.tmp
