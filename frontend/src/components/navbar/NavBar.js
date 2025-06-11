@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from 'react-router-dom';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -55,7 +56,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+           <Link to='/' style={{color:'white', textDecoration: 'none'}}>LOGO</Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -109,7 +110,7 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
@@ -156,8 +157,13 @@ function ResponsiveAppBar() {
             </Box>
             : (
                     <Box>
-                        <Button variant="contained">Login</Button>
-                        <Button variant="outlined" color='white'>Register</Button>
+                        <Button variant="contained">
+                          <Link to ='/login' style={{color:'white', textDecoration: 'none'}}>Login</Link>
+                        </Button>
+                        <Button variant="contained">
+                          <Link to ='/register' style={{color:'white', textDecoration: 'none'}}>Register</Link>
+                        </Button>
+                        
                     </Box>
                 )
         }
